@@ -1,3 +1,9 @@
-const index = () => <h1>Test</h1>;
+import Link from 'next/link';
 
-export default index;
+const HomePage = () => (
+  <div>
+    <h1>Homepage!</h1>
+  </div>
+);
+
+export default HomePage;
