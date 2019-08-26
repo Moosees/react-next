@@ -2,10 +2,19 @@ import axios from 'axios';
 import Link from 'next/link';
 
 const HomePage = ({ posts }) => {
+  const postList = [];
+  for (let i = 0; i < 10; i++) {
+    postList.push(
+      <li key={posts[i].id}>
+        <Link href={`/post?id=${posts[i].id}`}>{posts[i].title}</Link>
+      </li>
+    );
+  }
+
   return (
     <div>
       <h1>Homepage!</h1>
-      <div>{posts[Math.floor(Math.random() * 100)].title}</div>
+      <ul>{postList}</ul>
     </div>
   );
 };
