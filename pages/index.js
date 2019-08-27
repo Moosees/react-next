@@ -6,7 +6,7 @@ const HomePage = ({ posts }) => {
   for (let i = 0; i < 10; i++) {
     postList.push(
       <li key={posts[i].id}>
-        <Link href={`/post?id=${posts[i].id}`}>
+        <Link href={`/post?id=${posts[i].id}`} as={`/post/${posts[i].id}`}>
           <a>{posts[i].title}</a>
         </Link>
       </li>
